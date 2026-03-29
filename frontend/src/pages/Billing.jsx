@@ -100,7 +100,7 @@ export default function Billing() {
           <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
             <p className="text-xs text-slate-500">Estimated amount</p>
             <p className="mt-2 text-3xl font-semibold text-slate-900">
-              ${summary.totalAmount?.toFixed?.(2) ?? summary.totalAmount}
+              ₹{summary.totalAmount?.toFixed?.(2) ?? summary.totalAmount}
             </p>
           </div>
         </div>
@@ -152,7 +152,7 @@ export default function Billing() {
               <div>
                 <p className="font-medium text-slate-900">{inv.projectId?.title || "Project"}</p>
                 <p className="text-xs text-slate-500">
-                  {inv.billableHours}h × ${inv.hourlyRate} = ${inv.amount} — {inv.status}
+                  {inv.billableHours}h × ₹{inv.hourlyRate} = ₹{inv.amount} — {inv.status}
                 </p>
               </div>
             </div>
